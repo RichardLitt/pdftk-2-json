@@ -9,7 +9,11 @@ var splitStyle = require('inline-style-2-json')
 module.exports = function pdftk2json (inputFile, node) {
   var all = []
 
-  fs.createReadStream(__dirname + '/' + inputFile)
+  if (inputFile[0] !== '/') {
+    inputFile = __dirname + '/' + inputFile
+  }
+
+  fs.createReadStream(inputFile)
     .pipe(xmlNodes(node))
     .pipe(xmlObjects({explicitRoot: false, explicitArray: false, mergeAttrs: true}))
     .pipe(through2.obj(function (chunk, enc, callback) {
