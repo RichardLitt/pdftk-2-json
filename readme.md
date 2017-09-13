@@ -1,5 +1,7 @@
 # pdftk2json [![Build Status](https://travis-ci.org/RichardLitt/pdftk2json.svg?branch=master)](https://travis-ci.org/RichardLitt/pdftk2json)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/RichardLitt/pdftk-2-json.svg)](https://greenkeeper.io/)
+
 > Convert pdftk output HTML into JSON
 
 
